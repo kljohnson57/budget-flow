@@ -1,0 +1,355 @@
+/* a4stylesheet.css
+   A4: Intro CSS Fill-in Template
+   Instructions: rename this file to styles.css and complete each TODO block.
+*/
+
+
+
+
+
+/* ===== Base styles (mostly done) ===== */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background: #fff;
+}
+
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  width: min(1000px, 92%);
+  margin: 0 auto;
+}
+
+/* ===== Header ===== */
+.site-header {
+  border-bottom: 1px solid #eee;
+  background: #fff;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* TODO A (Flexbox):
+     Make the brand appear on the left and the navigation on the right.
+     Requirements:
+       - Use flexbox
+       - Center items vertically
+       - Put space between left and right
+  */
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.brand .dot {
+  color: #0075AB;
+  /* TODO B (Color):
+     Make the dot a light blue accent color (choose a readable blue).
+  */
+}
+
+.site-nav a {
+  margin-left: 18px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #444;
+}
+
+
+
+
+
+
+/* ===== Hero ===== */
+.hero {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
+        url("images/budgetbanner.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 360px;
+  /* TODO C (Background image hero):
+     Turn this into a hero banner with a background image.
+     Requirements:
+       - Use a background image URL (use the one below)
+       - Make it cover the area and center it
+       - Add a light overlay so text is readable (hint: use a linear-gradient + image)
+       - Set a minimum height (e.g., 360px)
+  */
+  /* My image:
+     https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=60
+  */
+}
+
+.hero-content {
+  text-align: center;
+  padding: 100px 0;
+  /* TODO D (Center content):
+     Center the hero text horizontally.
+     Add vertical padding so it doesn't feel cramped.
+  */
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 46px;
+  text-transform: uppercase;
+  /* TODO E (Typography):
+     Make the headline large and uppercase.
+     (e.g., font-size around 42–48px, text-transform uppercase)
+  */
+}
+
+.hero-subhead {
+  margin: 6px 0 22px;
+  font-size: 22px;
+  color: #555;
+  /* TODO F (Typography):
+     Make this slightly smaller than h1 and a softer color.
+     (e.g., font-size ~20–24px; color #555)
+  */
+}
+
+
+
+
+
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.btn-dark {
+  background: #003FAB;
+  color: #fff;
+  /* TODO G (Button styling):
+     Make this a dark filled button with white text.
+     (e.g., background #333; color #fff)
+  */
+}
+
+.btn-outline {
+  border: 2px solid #0075AB;
+  color: #0075AB;
+  background: transparent;
+  /* TODO H (Button styling):
+     Make this an outlined button with a blue border and matching text.
+     (e.g., border: 2px solid ...; color: ...; background: transparent)
+  */
+}
+
+/* ===== Features (3 columns) ===== */
+.features {
+  padding: 42px 0;
+}
+
+.features-grid {
+  display: flex;
+  gap: 26px;
+  /* TODO I (Layout):
+     Arrange the three feature blocks in a row (desktop).
+     Requirements:
+       - Use flexbox
+       - Add a gap between items (e.g., 26px)
+  */
+}
+
+.feature {
+  flex: 1;
+  text-align: center;
+  /* TODO J (Sizing / alignment):
+     Make each feature take equal width and center its text.
+  */
+}
+
+.icon {
+  width: 56px;
+  height: 56px;
+  border: 2px solid #00ABAB;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 12px;
+  color: #0075AB;
+  font-size: 22px;
+}
+
+/* ===== Featured content ===== */
+.featured {
+  padding: 42px 0 36px;
+  background: #f0f8fa;
+}
+
+.section-title {
+  text-align: center;
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section-lede {
+  text-align: center;
+  max-width: 680px;
+  margin: 10px auto 22px;
+  color: #666;
+  font-size: 13px;
+}
+
+.media {
+  background: #eaeaea;
+  border: 1px solid #ddd;
+  height: 300px;
+  overflow: hidden;
+}
+
+.media img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+}
+
+
+
+/* ===== Secondary content (2 cards) ===== */
+.secondary {
+  padding: 34px 0 44px;
+}
+
+.secondary-grid {
+  display: flex;
+  gap: 26px;
+  /* TODO K (Layout):
+     Put the two cards next to each other on desktop.
+     Requirements:
+       - Use flexbox
+       - Add a gap (e.g., 26px)
+  */
+}
+
+.card {
+  flex: 1;
+  border: 1px solid #eee;
+  /* TODO L (Card styling):
+     Give each card a border and make it take equal width.
+     (Hint: flex: 1; border: 1px solid #eee)
+  */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-text {
+  padding: 18px;
+}
+
+.card-text h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.card-text p {
+  margin: 0 0 14px;
+  color: #666;
+  font-size: 13px;
+}
+
+.card-image {
+  min-height: 160px;
+  background-size: cover;
+  background-position: center;
+  /* TODO M (Image block):
+     Make the card image behave like a background image:
+       - cover
+       - centered
+  */
+}
+
+/* Optional images (already provided) */
+.img-a {
+  background-image: url("images/savingsplan.jpg");
+}
+.img-b {
+  background-image: url("images/bank.jpg");
+}
+
+/* ===== CTA ===== */
+.cta {
+  background: #f0f8fa;
+  padding: 42px 0;
+}
+
+.cta-inner {
+  text-align: center;
+  /* TODO N (Center CTA):
+     Center the CTA text and button.
+  */
+}
+
+
+
+
+
+/* ===== Footer ===== */
+.site-footer {
+  background: #fafafa;
+  border-top: 1px solid #eee;
+  padding: 24px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  /* TODO O (Footer layout):
+     Arrange footer-left on the left and footer link columns on the right.
+     Requirements:
+       - Use flexbox
+       - Add a gap (e.g., 24px)
+       - Space items out (left/right)
+  */
+}
+
+.footer-left {
+  max-width: 360px;
+  color: #666;
+  font-size: 12px;
+}
+
+.footer-left a { color: #3a88a8; }
+
+.footer-cols {
+  display: flex;
+  gap: 28px;
+}
+
+.footer-col h4 {
+  margin: 0 0 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 12px;
+  color: #666;
+  margin: 6px 0;
+}
